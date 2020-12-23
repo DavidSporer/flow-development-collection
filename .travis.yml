@@ -84,6 +84,7 @@ install:
   - composer config minimum-stability dev
   - composer config prefer-stable true
   - composer require --no-update neos/flow-development-collection "dev-travis as dev-master"
+  - cat composer.json
   - composer update --no-progress --no-interaction
 before_script:
   - echo 'date.timezone = "Africa/Tunis"' >> ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/travis.ini
