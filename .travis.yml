@@ -80,7 +80,7 @@ install:
   - composer self-update --2 -q
   - if [ -n "$GH_TOKEN" ]; then composer config github-oauth.github.com ${GH_TOKEN}; fi;
   - composer config repositories.flow path ../flow-development-collection
-  - composer config repositories.flow.options.symlink false
+  - composer config --json repositories.flow.options '{ "symlink": false }'
   - composer config minimum-stability dev
   - composer config prefer-stable true
   - composer require --no-update neos/flow-development-collection "dev-travis as dev-master"
