@@ -82,7 +82,7 @@ install:
   - "composer config repositories.flow '{ \"type\": \"path\", \"url\": \"../flow-development-collection\", \"options\": { \"symlink\": false } }'"
   - composer config minimum-stability dev
   - composer config prefer-stable true
-  - composer require --no-update neos/flow-development-collection "dev-travis as dev-master"
+  - composer require --no-update neos/flow-development-collection "dev-travis as 7.0.x-dev"
   - cat composer.json
   - composer update --no-progress --no-interaction
 before_script:
